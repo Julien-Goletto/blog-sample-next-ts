@@ -1,0 +1,13 @@
+.header{
+  background: #0D6EFD;
+  color: #fff;
+  padding: .5rem;
+  font-weight: 300;
+}
+.navbar{
+  margin: 0 auto;
+  text-align: center;
+}
+.navbar a {
+  padding: 0 1rem;
+}
