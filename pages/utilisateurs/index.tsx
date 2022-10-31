@@ -16,7 +16,7 @@ interface UtilisateursProps{
   users : Utilisateur[];
 };
 
-const utilisateurs: NextPage<UtilisateursProps> = ({ users }) => {
+const Utilisateurs: NextPage<UtilisateursProps> = ({ users }) => {
   if(users.length === 0) return(
     <main className={styles.container}>
       <p>Chargement des données...</p>
@@ -46,7 +46,7 @@ const utilisateurs: NextPage<UtilisateursProps> = ({ users }) => {
   );
 }
 
-export default utilisateurs;
+export default Utilisateurs;
 
 export const getStaticProps = async() => {
   const data = await fetch("https://jsonplaceholder.typicode.com/users");

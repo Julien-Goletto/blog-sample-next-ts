@@ -15,7 +15,7 @@ export interface BlogProps {
   articles: Article[];
 }
 
-const blog: NextPage<BlogProps> = ({ articles }) => {
+const Blog: NextPage<BlogProps> = ({ articles }) => {
 
   if(articles.length === 0) return (
     <main className={styles.container}>
@@ -50,7 +50,7 @@ const blog: NextPage<BlogProps> = ({ articles }) => {
   );
 }
 
-export default blog;
+export default Blog;
 
 export async function getStaticProps() {
   const data = await fetch("https://jsonplaceholder.typicode.com/posts");

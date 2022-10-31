@@ -9,7 +9,7 @@ interface UtilisateurProps {
   userToRender: Utilisateur;
 };
 
-const contact: NextPage<UtilisateurProps> = ({ userToRender }) => {
+const Contact: NextPage<UtilisateurProps> = ({ userToRender }) => {
 
   if(!userToRender) return (
     <main className={styles.container}>
@@ -44,7 +44,7 @@ const contact: NextPage<UtilisateurProps> = ({ userToRender }) => {
   )
 }
 
-export default contact;
+export default Contact;
 
 interface Params extends ParsedUrlQuery{
   contact: string;

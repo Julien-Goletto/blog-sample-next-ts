@@ -9,7 +9,7 @@ interface ArticleProps {
   articleToRender: Article;
 }
 
-const article: NextPage<ArticleProps> = ({ articleToRender }) => {
+const Article: NextPage<ArticleProps> = ({ articleToRender }) => {
   if (!articleToRender)
     return (
       <main className={styles.container}>
@@ -34,7 +34,7 @@ const article: NextPage<ArticleProps> = ({ articleToRender }) => {
   );
 };
 
-export default article;
+export default Article;
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
   const data = await fetch("https://jsonplaceholder.typicode.com/posts");
