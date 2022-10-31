@@ -1,5 +1,6 @@
 import React from 'react';
 import { GetStaticProps, GetStaticPaths, NextPage } from 'next';
+import Head from 'next/head'; 
 import { Utilisateur } from './index';
 import { ParsedUrlQuery } from 'querystring';
 import styles from '../../styles/Home.module.css';
@@ -19,20 +20,27 @@ const contact: NextPage<UtilisateurProps> = ({ userToRender }) => {
   const { name, username, email, website, phone} = userToRender;
 
   return (
-    <main className={styles.container}>
-      <section className={styles.card}>
-        <h2>{name}</h2>
-        <p>Username : {username}</p>
-        <table>
-          <tbody>
-            <tr><td>Username: {username}</td></tr>
-            <tr><td>Email: {email}</td></tr>
-            <tr><td>Site Web: {website}</td></tr>
-            <tr><td>Téléphone: {phone}</td></tr>
-          </tbody>
-        </table>
-      </section>
-    </main>
+    <>
+      <Head>
+        <title>{'Code.io - ' + username}</title>
+        <meta name="description" content="Discover new articles about coding" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main className={styles.container}>
+        <section className={styles.card}>
+          <h2>{name}</h2>
+          <p>Username : {username}</p>
+          <table>
+            <tbody>
+              <tr><td>Username: {username}</td></tr>
+              <tr><td>Email: {email}</td></tr>
+              <tr><td>Site Web: {website}</td></tr>
+              <tr><td>Téléphone: {phone}</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </>
   )
 }
 
