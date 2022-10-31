@@ -11,7 +11,7 @@ export default function Home() {
       desc: "Chaque auteur tente de vous apporter le plus de valeur possible par article."
     },
     {
-      slug: "/liste",
+      slug: "/utilisateurs",
       title: "Faites un tour vers la liste des membres",
       catchphrase: "Faite-vous des amis",
       desc: "Ajouter, invitez et discutez avec les différents membres."
