@@ -74,6 +74,7 @@ export const getStaticProps: GetStaticProps<ArticleProps, Params> = async (
   return {
     props: {
       articleToRender,
+      revalidate: 60,
     },
   };
 };
